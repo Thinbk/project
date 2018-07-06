@@ -1,0 +1,20 @@
+<div *ngIf="student">
+  <h2>Thong tin ve sinh vien</h2>
+
+  <div><span> ID: </span> {{student.id}} </div>
+  <div><span> Name: </span> {{student.name}} </div>
+  <div><span> Class: </span> {{student.class}} </div>
+  <div>
+    <label>Edit name: </label>
+      <input [(ngModel)]="student.name" placeholder="name">
+  </div>
+  <button (click)="save()"> SAVE </button>
+
+  <button class="delete" (click)="delete(student); $event.stopPropagation()"> DELETE </button>
+
+  <br>
+  <button> ADD </button>
+</div>
+
+
+
